@@ -1,11 +1,18 @@
 {
-  "name": "swiggy",
+  "name": "to.do.authentication",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple to do app with login and autheticated routes",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "nitish",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.11.5",
+    "morgan": "^1.8.2"
+  }
 }
