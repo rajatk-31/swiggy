@@ -5,7 +5,7 @@
 var express = require('express');
 var registrationLogin = express.Router();
 var mongoose = require('mongoose');
-var user = require('../models/building')
+var user = require('../models/registration')
 var jwt    = require('jsonwebtoken'); 
 var superSecret = require('../config')
 
@@ -25,7 +25,7 @@ registrationLogin.post('/registration', function(req, res) {
 
    
 })
-    
+  
 
     userSave.save(function(err, data) {
       if (err) {
@@ -47,15 +47,16 @@ registrationLogin.post('/registration', function(req, res) {
 
 })
 
-/*registrationLogin.post('/login', function(req, res) {
-  if (!req.body.email || !req.body.password) {
+
+registrationLogin.post('/login', function(req, res) {
+  if (!req.body.phone || !req.body.password) {
     res.json({
       success: false,
       msg: "No data entered"
     })
   } else {
     user.findOne({
-      email: req.body.email
+      phone: req.body.phone
     }, function(err, user) {
 
       if (err) throw err;
@@ -86,6 +87,6 @@ registrationLogin.post('/registration', function(req, res) {
 
     })
   }
-})*/
+})
 
 module.exports = registrationLogin;
