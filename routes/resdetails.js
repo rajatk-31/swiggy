@@ -18,7 +18,31 @@ todoRoutes.use(function(req, res, next) {
 })
 
 resdetails.post('/res_details',function(req,res){
-	var newRes = new todo({
-      email: req.decoded._doc.email,
-      name: req.body.name
+	var newRes = new BuildingSchema({
+		building_id:req.body.building_id,
+		building_address :req.body.Building_address,
+		building_name: req.body.building_name,
+		Restaurant:{
+			Restaurant_id: 'avd',
+			Restaurant_address: req.body.Restaurant_address,
+			Restaurant_name: req.body.Restaurant_name,
+
+		}
+
+
+   
 })
+	   resdetails.save(function(err, data) {
+      if (err) {
+        res.status(500).json({
+          success: false,
+          msg: "Database error"
+        })
+      } else {
+        res.json({
+          success: true,
+          data: data,
+          decoded: req.decoded
+        })
+      }
+    })
