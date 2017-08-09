@@ -274,7 +274,7 @@ li, .sort_span{
 
 }
     .shadow-box,.shadow-hover:hover{
-       box-shadow:  0 3px 16px 0 rgba(0, 0, 0, .11);
+       box-shadow:  3px 3px 16px 0 rgba(0, 0, 0, .11);
     }
 
     .restaurant-image{
@@ -382,16 +382,16 @@ li, .sort_span{
     font-weight: 300 !important;
 }
 .font-Roboto{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif !important;
 }
 .font-Dosis{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Dosis', sans-serif !important;
 }
 .font-Ubuntu{
- font-family: 'Ubuntu', sans-serif;  
+ font-family: 'Ubuntu', sans-serif !important;  
 }
 .font-left{
-    text-align: left;
+    text-align: left !important;
 }
 .font-right{
     text-align:right !important;
@@ -446,6 +446,9 @@ li, .sort_span{
 .color-red{
     color: red !important;
 }
+.color-black{
+    color: black !important;
+}
 .image-bg {
     max-width: 100%;
     height: auto;
@@ -455,14 +458,33 @@ li, .sort_span{
 
 .home {
     background: center no-repeat #795548;
-    background-size: cover!important;
+    background-size: cover !important;
     padding: 0;
     margin: 0;
     min-height: 100%;
     height: 100%;
         background-attachment: fixed!important
 }
-
+.register{
+    background: center no-repeat black;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5;
+}
+.filter-none{
+    filter: none;
+}
+.opacity-1{
+    opacity: 1 !important;
+}
+.panel-transparent{
+    background-color: rgba(235,235,235, 0.5);
+}
 @media (max-width:767px) {
     .home {
         background-size: none!important;
@@ -488,6 +510,19 @@ li, .sort_span{
 .margin-top-16 {
     margin-top: 16px;
 }
+.margin-top-50 {
+    margin-top: 50px;
+}
+.margin-bottom-16{
+    margin-bottom: 16px;
+}
+.margin-left-16
+{
+    margin-left: 16px;
+}
+.margin-right-16{
+    margin-right: 16px;
+}
 
 .home-logo {
     margin-top: 15%;
@@ -495,6 +530,12 @@ li, .sort_span{
 
 .height-30 {
     height: 54px;
+}
+.height-150{
+    max-height: 150px;
+}
+.height-80p{
+    max-height: 80% !important;
 }
 .search-icon{
     background-color: white;
@@ -517,6 +558,58 @@ li, .sort_span{
     text-overflow: ellipsis;
     z-index: 2 !important;
     box-shadow: none;
+    
+}
+.reg_table{
+    width: 100%;
+}
+.reg_table tr td:nth-child(odd){
+    width: 40%;
+}
+.reg_table tr td:nth-child(even){
+    width: 60%;
+}
+.search-box:focus{
+    box-shadow: none;
+    outline: none;
+}
+.input-bottom {
+border-top: none !important;
+    border-bottom: 1px solid #eee !important;
+    border-left: none !important;
+    border-right: none !important;    
+    outline: none !important;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    box-shadow: none;
+    transition: border 1s ease; 
+    border-radius: 0px  !important;
+    
+}
+.input-bottom-blue
+{
+border-top: none !important;
+    border-bottom: 1px solid #b5a898 !important;
+    border-left: none !important;
+    border-right: none !important;    
+    outline: none !important;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    box-shadow: none;
+    transition: border 1s ease; 
+    border-radius: 0px  !important;
+}
+.input-bottom:focus{
+    outline: none !important;
+    box-shadow: none !important;
+        transition: width 1 ease, border 1s ease;
+	border-bottom: 1px solid blue !important;
+}
+.input-bottom-blue:focus{
+    outline: none !important;
+    box-shadow: none !important;
+        transition: width 1 ease, border 1s ease;
+	border-bottom: 1px solid green !important;
 }
 .line{
     border-top:1px solid #da1515;
@@ -526,4 +619,16 @@ li, .sort_span{
 }
 .line-black-3{
     border-top: 3px solid black;
+}
+.scroll{
+    overflow-y: scroll;
+}
+#Registration_seller{
+ max-width: 100%;
+    height: auto;
+    background-image: url('https://www.volusia.org/resources/background-medium.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
